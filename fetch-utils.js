@@ -18,3 +18,8 @@ export async function fetchNames() {
     const response = await client.from('names').select('*').limit(5);
     return response.data;
 }
+
+export async function fetchStreets() {
+    const response = await client.from('streets').select('*').limit(5);
+    return response.data;
+}

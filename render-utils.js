@@ -42,3 +42,16 @@ export function renderNames(names) {
     div.append(h2, p);
     return div;
 }
+
+export function renderStreets(streets) {
+    const div = document.createElement('div');
+
+    const h2 = document.createElement('h2');
+    h2.textContent = streets.name;
+
+    const p = document.createElement('p');
+    p.textContent = `You live on ${streets.number} ${streets.name} ${streets.suffix}`;
+
+    div.append(h2, p);
+    return div;
+}
