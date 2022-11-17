@@ -8,3 +8,13 @@ export async function fetchCars() {
     const response = await client.from('cars').select('*').order('make').limit(5);
     return response.data;
 }
+
+export async function fetchMonies() {
+    const response = await client.from('money').select('*').limit(5);
+    return response.data;
+}
+
+export async function fetchNames() {
+    const response = await client.from('names').select('*').limit(5);
+    return response.data;
+}
